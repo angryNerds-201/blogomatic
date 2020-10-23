@@ -25,41 +25,34 @@
     <main>
         <h1>Create your own Blog!</h1>
         <section id="leftSection">
-            <form action="/action_page.php">
+            <form id="createForm">
                 <label class="require" for="yourName">Your Name:</label>
                 <input type="text" id="YourName" name="name"><br><br>
                 <label class="require" for="blogTitle">Blog Title:</label>
                 <input type="text" id="blogTitle" name="name"><br><br>
                 <label class="require" for="category">Pick Category:</label>
                 <select id="categoryOptions" name="category">
-                    <option value="books">Books</option>
-                    <option value="business">Business</option>
-                    <option value="cars">Cars</option>
-                    <option value="diary">Diary</option>
-                    <option value="funny">Funny</option>
-                    <option value="food">Food</option>
-                    <option value="medical">Medical</option>
-                    <option value="motherHood">Mother Hood</option>
-                    <option value="petPeeve">Pet Peeves</option>
-                    <option value="travel">Travel</option>
-                    <option value="tragic">Tragic</option>
-                    <option value="other">Other</option>
                 </select></br>
                 </br>
-                <label class="require" for="GoCrazy">Go Crazy:</label>
-                <input type="text" id="GoCrazy" name="name"><br><br>
-                <input type="submit">
-            </form>
+                <label class="require" for="blogContent">Your Blog:</label>
+                <textarea name="" id="blogContent" cols="30" rows="10"></textarea><br><br>
+                
+                <section id="rightSection">
+
+                    <label class="addImg" for="img">Add your image (url):</label>
+                    <input type="url" id="image" name="image"></section><br><br>
+            
+                    <input id="submit" type="submit">
+                    </form>
         </section>
-        <section id="rightSection">
-            </br>
-            <form action="/action_page.php">
-                <label class="addImg" for="img">Add your image (url):</label>
-                <input type="url" id="image" name="image"><br><br>
-                <input type="submit">
-            </form>
-        </section>
+
     </main>
+    <footer>
+        <p>© 2020 Blogomatic</p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/createBlog.js"></script>
+
 </body></br>
 <!-- <footer>
     <p id="footertext">All rights reserved to Blogomatic 2020</p>
