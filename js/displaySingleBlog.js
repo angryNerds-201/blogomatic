@@ -12,3 +12,15 @@ singleBlogP.innerHTML=Blog.all[singleBlog].blogContent;
 singleBlogContent.appendChild(singleBlogP);
 }
 renderSingleBlog(savedBlogId);
+
+
+var favBtn=document.getElementById('readLaterBtn');
+favBtn.addEventListener('click',addToFav);
+
+function addToFav(){
+    if(!favToLater.includes(savedBlogId)){
+        favToLater.push(savedBlogId);
+        localStorage.setItem('favBlog',JSON.stringify(favToLater));
+    }
+  
+}
