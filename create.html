@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -26,28 +27,49 @@
         </nav>
     </header>
     <main>
-        <h1>Create your own Blog!</h1>
+
         <section id="leftSection">
             <form id="createForm">
-                <label class="require" for="yourName">Your Name:</label>
-                <input type="text" id="YourName" name="name" required><br><br>
-                <label class="require" for="blogTitle">Blog Title:</label>
-                <input type="text" id="blogTitle" name="name" required><br><br>
-                <label class="require" for="category">Pick Category:</label>
-                <select id="categoryOptions" name="category">
-                </select></br>
-                </br>
-                <label class="require" for="blogContent">Your Blog:</label>
-                <textarea name="" id="blogContent" cols="30" rows="10" required></textarea><br><br>
-                
-                <section id="rightSection">
+                <h1>Create your own Blog!</h1>
+                <div class="formRow">
+                    <div><label class="require" for="yourName">Your Name:</label>
+                        <input type="text" id="YourName" name="name" required></div>
+                    <div>
+                        <label class="require" for="blogTitle">Blog Title:</label>
+                        <input type="text" id="blogTitle" name="name" required>
+                    </div>
+                </div>
 
-                    <label class="addImg" for="img">Add your image (url):</label>
-                    <input type="file" id="image" name="image" accept=".gif,.jpg,.jpeg,.png" required></section><br><br>
-             <img id="loadedImg">
-            
-                    <input id="submit" type="submit">
-                    </form>
+                <div class="formRow">
+                    <div><label class="require" for="category">Pick Category:</label>
+                        <select id="categoryOptions" name="category">
+                        </select></div>
+
+                </div>
+
+                </div>
+                <div class="formRow">
+                    
+
+                        <div><label class="addImg" for="img">Upload image</label>
+                            <input type="file" id="image" name="image" accept=".gif,.jpg,.jpeg,.png" required>
+                        </div>
+                        <div>
+                            <img id="loadedImg">
+                        </div>
+                    
+
+                </div>
+                <div><label class="require" for="blogContent">Your Blog:</label>
+                    <textarea name="" id="blogContent" cols="30" rows="10" required></textarea></div>
+
+                <div>
+
+                    <button id="submit" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
         </section>
 
     </main>
@@ -57,7 +79,7 @@
     <script src="js/app.js"></script>
     <script src="js/createBlog.js"></script>
     <script src="js/saveLs.js"></script>
-    
+
 
 </body>
 
