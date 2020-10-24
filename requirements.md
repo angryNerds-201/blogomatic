@@ -15,3 +15,9 @@ Our stretch goals are the folloing:
 - allow users to add comments
 - allow users to subscribe to blogger
 - allow users to create an account
+
+As a user, I want the ability to write my own blog and have them stored, so I can keep going back to them
+As website developers, we want the ability to give the user the best ‘user experience design’
+As website developers, we want our users to have a wide variety of topics to read about
+As website developers, we want our users to feel free and write whatever they want and create their own individual blog.
+As website developers, we want to connect people with each other, by being able to have your blog be shown publicly.
