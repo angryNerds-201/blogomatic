@@ -37,4 +37,3 @@ function createBlog(event){
 localStorage.setItem('BlogId',JSON.stringify(newBlogId));
 window.location.replace('blog-page.html');
 }
-

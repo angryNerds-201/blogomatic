@@ -27,6 +27,14 @@ if(getBlogsFromLS){
   Blog.all = getBlogsFromLS;
 }
 // var categories = [];
+var favToLater=[];
+var getFavBlogs=JSON.parse(localStorage.getItem('favBlog'));
+if(getFavBlogs){
+favToLater=getFavBlogs;
+}
+for (var i=0;i<favToLater.length;i++){
+  favToLater[i]=parseInt(favToLater[i]);
+}
 
 if(Blog.all.length === 0){
   var blog1Content = 'Whether you are a public figure or not, you’re always going to have to deal with people’s opinions of your work. Sometimes, it will be valid; other times, it won’t. Judge the judger, before you let their opinion get to you. Regardless of who is giving you the praise, or the criticism,  you should never allow someone else’s opinion to make you sad. I had a conversation with a caller on Tea With GaryVee about this very topic. I hope it resonates with you. 1. REALIZE THAT THEY DON’T KNOW YOU Whoever is leaving mean comments on your content most likely has no idea who you are. Michelle: I get really put down by people’s comments and I’ve been watching what you say about not listening to them…but I’m just a really soft person. I’m really sensitive, so I have a really hard time. Gary: Let me try to help.The biggest thing that you need to realize is they don’t know you. People criticize me all the time but they have no idea who I am or what I do. They read one quote or look at one clip, out of context, and they think they know me. I’m not too big on constructive criticism when it comes from people who have no idea what they’re talking about. Judge the judger who’s judging you. 2. EMPATHIZE WITH THEM Do you know how sad someone must be to take the time and leave a mean comment? Second, you have to be empathetic and feel compassion for them. Michelle, listen to me, do you know how sad of a place somebody has to be in for them to take the time to watch your video and say something to make you feel bad? Just so that you feel bad with them. Do you understand how sad they must feel?  I’m not joking, and I think people think i’m just trying to cheer you up, but I’m not joking. When people say shit about you like: you’re ugly, that’s stupid, you’re not funny, you’re dumb, that’s wrong– I don’t know how to do anything other than feel really bad for them.';

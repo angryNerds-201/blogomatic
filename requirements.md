@@ -16,6 +16,7 @@ Our stretch goals are the following:
 - allow users to subscribe to blogger
 - allow users to create an account
 - display all blogs of the category 
+- add read-later list.
 
 As a user, I want the ability to write my own blog and have them stored, so I can keep going back to them
 As website developers, we want the ability to give the user the best ‘user experience design’
