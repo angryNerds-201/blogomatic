@@ -8,13 +8,14 @@ OUT - We will not provide a share or comment segment to other's blog.
 You cannot modify your blog after it was submitted.
 You cannot upload pictures.
 
-Our stretch goals are the folloing:
+Our stretch goals are the following:
 
 - image hosting option
 - allow user to publify their blog
 - allow users to add comments
 - allow users to subscribe to blogger
 - allow users to create an account
+- display all blogs of the category 
 
 As a user, I want the ability to write my own blog and have them stored, so I can keep going back to them
 As website developers, we want the ability to give the user the best ‘user experience design’
