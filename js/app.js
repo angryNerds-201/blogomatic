@@ -5,11 +5,11 @@ var Blog = function(blogName, bloggerName,blogContent, category){
   this.bloggerName = bloggerName;
   this.blogContent = blogContent;
   this.blogCategory = category;
-  this.imgURL = '';
+  this.blogImg = '';
   Blog.all.push(this);
 };
 Blog.prototype.setBlogImg = function(blogImgURL){
-  this.imgURL = blogImgURL;
+  this.blogImg = blogImgURL;
 };
 Blog.prototype.storeToLocalStorage = function(){
   console.log(Blog.all);

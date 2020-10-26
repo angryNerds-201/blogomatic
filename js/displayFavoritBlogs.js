@@ -36,7 +36,7 @@ function getBlogPosts() {
       blogInfoDiv.appendChild(readBtnDiv);
 
       var blogImg = document.createElement('img');
-      blogImg.setAttribute('src', Blog.all[i].imgURL);
+      blogImg.setAttribute('src', Blog.all[i].blogImg);
       blogImgDiv.appendChild(blogImg);
       var blogEverything = document.createElement('section');
       blogEverything.appendChild(blogInfoDiv);

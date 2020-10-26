@@ -1,4 +1,4 @@
-var categoriesArray = ['books', 'buisness', 'cars', 'diary', 'funny', 'food', 'medical', 'motherHood', 'petPeeve'];
+var categoriesArray = ['all','books', 'buisness', 'cars', 'diary', 'funny', 'food', 'medical', 'motherHood', 'petPeeve'];
 // to give the drop down list a values of catigoris
 var categoriesDropDownList = document.getElementById('selectCat');
 for (var i = 0; i < Blog.all.length; i++) {
@@ -13,8 +13,9 @@ for (var i = 0; i < categoriesArray.length; i++) {
 }
 console.log(Blog.all.length);
 function getBlogPosts() {
+  var mainSection = document.getElementById('blogEverything');
+  mainSection.innerHTML='';
   for (var i = 0; i < Blog.all.length; i++) {
-
     console.log(Blog.all[i]);
     var bloggerName = document.createElement('h6');
     var blogContent = document.createElement('p');
@@ -49,7 +50,7 @@ function getBlogPosts() {
     blogInfoDiv.appendChild(readBtnDiv);
 
     var blogImg = document.createElement('img');
-    blogImg.setAttribute('src', Blog.all[i].imgURL);
+    blogImg.setAttribute('src', Blog.all[i].blogImg);
     blogImgDiv.appendChild(blogImg);
     var blogEverything = document.createElement('section');
     blogEverything.appendChild(blogInfoDiv);
