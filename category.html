@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Categury</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -19,26 +21,20 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="create.html">Create a blog</a></li>
-                    <li><a href="favoriteList.html">Favorite</a></li>
+                    <li><a href="readLater.html">Read Later</a></li>
                     <li><a href="category.html">Blogs</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-         <div>
-             <div class="categoryForm-div">
-                 <form id="categoryForm">
-                    <h4>Categories List</h4>
+    <main class="categoryMain">
+        <div>
+            <div class="categoryForm-div">
+                <form id="categoryForm">
+                    <label>Categories List</label>
                     <select id="selectCat"></select>
-                       <!-- <label for="category"> Category<input type="text"></label>
-                        <label for="">Blog Title<input type="text"></label>
-                        <label for="">Blog Owner<input type="text"></label>
-                        <label for=""> Blog <input type="text"></label>--> <button type="submit">Filter</button>
+                    <button type="submit">Filter</button>
                 </form>
-            </div>
-            <div class="imgCover-div">
-                <img class='coverImg' src="" alt="coverPhoto">
             </div>
         </div>
         <section id="blogEverything"></section>
@@ -49,5 +45,6 @@
     <script src="js/app.js"></script>
     <script src="js/displayBlogs.js"></script>
     <script src="js/catFilter.js"></script>
-    </body>
+</body>
+
 </html>

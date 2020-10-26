@@ -51,6 +51,10 @@ if(Blog.all.length === 0){
   var blog3 = new Blog('DON’T BE AN OSTRICH WHEN IT COMES TO HEART HEALTH, BY DR.ECCLES','DR. NYJON ECCLES', blog3Content, 'health');
   var blog4 = new Blog('Diagnosis: Artistic paralysis','Joe', blog4Content, 'art');
   var blog5 = new Blog('My Life, My Experience!','Wendy Kusumowidagdo', blog5Content, 'experience');
-
+  blog1.setBlogImg('img/slack-imgs.jpg');
+  blog2.setBlogImg('img/slack-canada.jpg');
+  blog3.setBlogImg('img/slack-imgs.png');
+  blog4.setBlogImg('img/slack-art.jpg');
+  blog5.setBlogImg('img/slack-imgs-1.jpg');
   blog2.storeToLocalStorage();
 }
