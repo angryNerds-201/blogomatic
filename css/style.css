@@ -225,9 +225,6 @@ color: white;
     }
      .formRow{
          display: flex;
-         
-         
-
      }
      .formRow div{
       width: 50%;   
@@ -241,6 +238,98 @@ color: white;
          padding: 10px 60px;
          border-radius: 5px;
          border: none;
-       
      }
-     
+     .categoryForm-div{
+         display: flex;
+         justify-content: center;
+    padding: 30px  0px;
+        }
+     #categoryForm{
+         margin: auto;
+
+     }
+     .blogContentRow{
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 50px;
+     }
+     .blogRightDiv img{
+max-width: 250px;
+     }
+     .blogRightDiv {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+     }
+     #blogEverything, #favoriteBlogs{
+         width: 900px;
+         margin: auto;
+         padding: 0px 0px 60px 0px;
+     }
+     .categoryMain{
+         background-color: #f9f4ef;
+     }
+     .blogLeftDiv{
+         width: 65%;
+
+     }
+     .blogContentDiv p{
+height: 100px;
+overflow: hidden;
+     }
+     .blogContentDiv{
+         background-color: white;
+         border-radius: 5px;
+         padding: 20px 30px;
+         color: rgba(0, 0, 0, 0.8);
+     }
+     .blogTitleDiv h3{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        color: #EE7840;
+        font-weight: bold;
+     }
+.blogCatAndBlogger{
+    display: flex;
+justify-content: space-around;
+margin-bottom: 20px;
+}
+.bloggerNameDiv, .blogCatDiv{
+    display: flex;
+font-size: 18px;
+}
+
+.bloggerNameDiv span, .blogCatDiv span{
+margin-right: 5px;
+color: #EE7840;
+
+}
+.bloggerNameDiv h6, .blogCatDiv h6{
+text-transform: capitalize;
+    color: rgba(0,0,0,0.8);
+}
+
+.readMoreButton button{
+    background-color: #EE7840;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.readMoreButton{
+    text-align: center;
+}
+.favoriteBlogMain{
+background-color: #f9f4ef;
+}
+#favoriteBlogs{
+    padding-top: 50px;
+    min-height: 90vh;
+}
+.readMoreButton button:first-child{
+margin-right: 10px;
+}

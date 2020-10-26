@@ -36,5 +36,5 @@ function createBlog(event){
   createForm.reset();
   var newBlogId=Blog.all.length-1;
 localStorage.setItem('BlogId',JSON.stringify(newBlogId));
-// window.location.replace('blog-page.html');
+window.location.replace('blog-page.html');
 }
