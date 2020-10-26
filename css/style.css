@@ -1,3 +1,84 @@
 #loadedImg{
     max-height: 250px;
     max-width: 250px;}
+    
+    header {
+        padding: 20px 0px 10px;
+        background-color: #EE7840;
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 2px 12px rgb(131, 130, 130);
+    }
+    header nav{
+        padding:0px 20px;
+        display : flex;
+        justify-content: space-between;
+    }
+    header nav li{
+        border-radius: 5px;
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 22px;
+        margin-top: 10px;
+        /* background-color:  #F0DAC0; */
+    }
+    header nav img{
+        max-width: 250px;
+    }
+    header nav li a{
+        color:  #F0DAC0;
+        text-decoration: none;
+        
+    }
+    header nav li:hover{
+border-bottom:3px solid  #F0DAC0 ;
+/* box-shadow: 0 0px 2px rgb(131, 130, 130); */
+    }
+
+    footer{
+        background-color: #EE7840;
+        color:  #F0DAC0;
+        text-align: center;
+        padding: 30px 0px;
+        font-size: 20px;
+    }
+.banner{
+    /* background-image: url('https://wallpaperstock.net/laptop-macbook-iphone-apple_wallpapers_54218_852x480.jpg'); */
+    height: 75vh;
+    background-size: cover;
+    background-image: radial-gradient(rgba(0,0,0,0.15)20%, rgba(0,0,0, 1)), url('/img/cover.jpg');
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  
+    
+}
+.banner h1{
+    color:  white;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.banner a{
+    background-color: #EE7840;
+    color:white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgb(84 84 84 / 86%);
+
+}
+main{
+    padding-top: 103px;
+}
+
+.index-about-blog{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.index-about,.index-blog{
+    width: 50%;
+    padding: 0px 20px;
+}
