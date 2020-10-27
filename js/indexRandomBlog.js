@@ -20,9 +20,19 @@ function renderRandomBlog(selectedBlog){
   indexBlogContentP.innerHTML = selectedBlog.blogContent;
   indexBlogContent.appendChild(indexBlogContentP);
 }
-
+var indexContinuteReading;
 function chooseRandomBlog(){
   var randomBlogIndex = getRndInteger(0, Blog.all.length);
   renderRandomBlog(Blog.all[randomBlogIndex]);
+  indexContinuteReading = document.getElementById('indexContinuteReading');
+  indexContinuteReading.setAttribute('id',randomBlogIndex);
+  indexContinuteReading.addEventListener('click', saveIdLs);
 }
 chooseRandomBlog();
+
+function saveIdLs(event) {
+  var selectedId = event.target.id;
+  localStorage.setItem('BlogId', JSON.stringify(selectedId));
+  window.location.replace('blog-page.html');
+
+}

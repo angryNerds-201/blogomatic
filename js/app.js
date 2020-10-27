@@ -1,8 +1,8 @@
 // single blog constructor
 
 var Blog = function(blogName, bloggerName,blogContent, category){
-  this.blogName = blogName;
-  this.bloggerName = bloggerName;
+  this.blogName = blogName.toLowerCase();
+  this.bloggerName = bloggerName.toLowerCase();
   this.blogContent = blogContent;
   this.blogCategory = category;
   this.blogImg = '';
@@ -17,10 +17,10 @@ Blog.prototype.storeToLocalStorage = function(){
 };
 
 // all blogs constructor
-var allBlogs = function(items){
+/*var allBlogs = function(items){
   this.items = items;
 };
-
+*/
 Blog.all = [];
 var getBlogsFromLS = JSON.parse(localStorage.getItem('allBlogs'));
 if(getBlogsFromLS){
