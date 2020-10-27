@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6{
 p, span{
     font-family: 'Roboto Slab', serif;
 }
-a, label, input, select{
+a, label, input, select,button{
     font-family: 'Roboto Slab', serif;
     font-weight: 800;
 }
@@ -203,7 +203,7 @@ border-radius: 15px;
     background-image: linear-gradient(to right,rgba(246, 169, 112,0.3) 10%, rgb(46, 26, 10)), url('https://c.pxhere.com/images/89/01/c0c88ec3311492c7bc249a322c9c-1458685.jpg!d');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0;
+    padding: 150px 0px 50px;
 
 }
 
@@ -219,8 +219,14 @@ border-radius: 15px;
 }
 #createForm h1 {
     text-align: center;
-    padding-bottom: 20px;
-    font-size: 25px;
+    padding: 0px 20px 6px;
+    font-size: 30px;
+    border-bottom: 3px solid #EE7840;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.createFromTitle{
+    text-align: center;
 }
 #createForm label,
 #createForm input {
@@ -447,10 +453,16 @@ margin: auto;
 }
 .aboutText h2 {
 text-align: center;
-color:  #EE7840;
+color:  rgba(0, 0, 0, 0.8);
 font-weight: bold;
 font-size: 25px;
-padding: 10px;
+padding: 0px 20px 6px;
+border-bottom: 3px solid #EE7840;
+display: inline-block;
+margin-bottom: 30px;
+}
+.aboutText{
+    text-align: center;
 }
 .aboutProject p,.aboutTeam p {
     color: rgba(0, 0, 0, 0.712);
@@ -508,7 +520,8 @@ padding: 10px;
 .allContentDiv{
     display: flex;
     justify-content: space-between;
-
+    width: 70%;
+    
 }
 .blogger-name, .blog-category{
 display: flex;
@@ -517,17 +530,23 @@ color: rgba(0, 0, 0, 0.8);
 text-transform: capitalize;
 
 }
+.blogger-name{
+    margin-bottom: 15px;
+}
 .blogger-name span, .blog-category span{
 margin-right: 5px;
 color: #EE7840;
 }
 .allContentSection{
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     width: 1000px;
     margin: auto;
 }
-.blog-title button {
+.blog-page-main{
+    background-color: #f9f4ef;
+}
+.blog-btns button {
     background-color: #EE7840;
     color: white;
     padding: 10px 30px;
@@ -535,6 +554,11 @@ color: #EE7840;
     border: 0;
     border-radius: 5px;
     margin-top: -10px;
+    
+    
+}
+.blog-btns{
+    padding-right: 30px;
 }
 .contentSection{
 display: flex;
@@ -550,12 +574,12 @@ width: 70%;
 } 
 .blog-image{
    width: 30%;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
+ 
 }
 .blog-image img{
 max-width: 300px;
+border-radius: 15px;
+box-shadow: 4px 4px 10px #9E9E9E;
 }
 .blog-content p{
     padding-right: 30px;
