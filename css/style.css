@@ -26,18 +26,18 @@ header nav img {
     max-width: 250px;
 }
 header nav li a {
-    color: #F0DAC0;
+    color: white;
     text-decoration: none;
 
 }
 header nav li:hover {
-    border-bottom: 3px solid #F0DAC0;
+    border-bottom: 3px solid white;
     /* box-shadow: 0 0px 2px rgb(131, 130, 130); */
 }
 
 footer {
-    background-color: #EE7840;
-    color: #F0DAC0;
+    background-color: #1D1B21;
+    color: white;
     text-align: center;
     padding: 30px 0;
     font-size: 20px;
@@ -69,7 +69,7 @@ footer {
 
 }
 main {
-    padding-top: 103px;
+    /* padding-top: 103px; */
 }
 
 .index-about-blog {
@@ -354,3 +354,94 @@ main {
 .hidden{
     display: none;
 }
+
+.membersSection{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px ;
+    background-color: #f9f4ef;
+}
+.member img {
+    max-height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: 0px auto 20px;
+}
+.innerMember{
+    padding: 0px 20px;
+}
+.member{
+    width: 25%
+}
+.member p{
+    font-size: 18px;
+    text-align: center;
+}
+.member p span{
+    color:  #EE7840 ;
+    font-weight: bold;
+}
+p{
+    line-height: 1.3;
+}
+.intro{
+    display: flex;
+    justify-content: space-between;
+}
+.aboutText{
+    width: 50%;
+    padding-top: 5px;
+    
+}
+.aboutLogo-Slogan{
+    width : 40%;
+}
+.aboutLogo-Slogan .logo{
+width: 300px;
+display: block;
+margin: auto;
+}
+.page-banner{
+    padding: 200px 0px 80px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('../img/banner6.jpg') ;
+
+    background-position: top;
+    background-size: cover;
+}
+.page-banner h1{
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+.aboutLogo-Slogan h3{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.intro{
+    padding: 60px 0px;
+}
+.aboutText h2 {
+text-align: center;
+color:  #EE7840;
+font-weight: bold;
+font-size: 25px;
+padding: 10px;
+}
+.aboutProject p,.aboutTeam p {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: justify;
+   
+    font-size: 18px;
+}
+.aboutProject{
+    margin-bottom: 30px;
+}
+.about-divider{
+    width: 200px;
+    border-top: 2px solid #EE7840 ;
+}
+.aboutProject,.aboutTeam {
+    padding: 0px 80px 0px 0px ;
+} 
