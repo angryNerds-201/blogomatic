@@ -47,7 +47,7 @@ function getBlogPosts() {
     blogTitle.textContent = Blog.all[i].blogName;
     blogCat.textContent = Blog.all[i].blogCategory;
     console.log(Blog.all[i].blogCategory);
-    readBtn.textContent = 'view Blog';
+    readBtn.textContent = 'View Blog';
     readBtn.setAttribute('id', i);
     readBtn.addEventListener('click', saveIdLs);
 

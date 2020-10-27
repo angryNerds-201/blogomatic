@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Page</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,41 +18,45 @@
             <div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="category.html">Blogs</a></li>
                     <li><a href="create.html">Create a blog</a></li>
                     <li><a href="readLater.html">Read Later</a></li>
-                    <li><a href="category.html">Blogs</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <section class="page-banner">
-            <h1>About</h1>
+            <h1 id="singleBlogName"></h1>
         </section>
-        <section>
+        <section class="allContentSection">
+
+            <div class="allContentDiv">
+                <div class="blogger-name">
+                    <span>Written by </span>
+                    <h6 id="singleBloggerName"></h6>
+                </div>
+                <div class="blog-category">
+                    <span>Category:</span>
+                    <h6 id='singleBlogCat'></h6>
+                </div>
+                        <div class="blog-title">
+                            <button id="readLaterBtn">Read Later</button>
+                            <button id="rmvReadLaterBtn">Finished Reading</button>
+                        </div>
+        </div>
+        </section>
+        <section class="contentSection">
+            <div class="blog-content" id='singleBlogContent'>
+            </div>
             <div class="blog-image">
                 <img id='singleBlogImage'>
-            </div>
-            <div class="blog-title">
-                <button id="readLaterBtn">Read Later</button>
-                <button id="rmvReadLaterBtn">Finished Reading</button>
-                <h2 id='singleBlogName'>Blog Name</h2>
-            </div>
-            <div class="blog-category">
-                <h6 id='singleBlogCat'>Blog category</h6>
-            </div>
-            <div class="blogger-name">
-                <h6 id="singleBloggerName">Blogger name</h6>
-            </div>
-        </section>
-        <section>
-            <div class="blog-content" id='singleBlogContent'>
             </div>
         </section>
     </main>
     <footer>
-        <p>© 2020 Blogomatic</p>
+        <p>All Rights Reserved © 2020 Blogomatic</p>
     </footer>
     <script src="js/app.js"></script>
     <script src="js/displaySingleBlog.js"></script>
