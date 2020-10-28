@@ -1,5 +1,7 @@
+// Gets the id of the desired blog from local storage to display it on it's own page
 var savedBlogId = parseInt(JSON.parse(localStorage.getItem('BlogId')));
 
+// Displys the desired blog on its own page
 function renderSingleBlog(singleBlog) {
   var singleBlogName = document.getElementById('singleBlogName');
   var singleBlogCat = document.getElementById('singleBlogCat');
@@ -17,14 +19,13 @@ function renderSingleBlog(singleBlog) {
 }
 
 
-
 var favBtn = document.getElementById('readLaterBtn');
 favBtn.addEventListener('click', addToRL);
 var rmvReadLaterBtn = document.getElementById('rmvReadLaterBtn');
 rmvReadLaterBtn.addEventListener('click', removeFromRL);
 renderSingleBlog(savedBlogId);
 
-
+// Adds blog to Read Later
 function addToRL() {
   if (!favToLater.includes(savedBlogId)) {
     favToLater.push(parseInt(savedBlogId));
@@ -34,6 +35,7 @@ function addToRL() {
   }
 }
 
+// Remove from Read Later
 function removeFromRL() {
   if (favToLater.includes(savedBlogId)) {
     console.log(favToLater.indexOf(parseInt(savedBlogId)));
@@ -44,6 +46,7 @@ function removeFromRL() {
   }
 }
 
+// Switches between buttons
 function toggleReadLater() {
 
   if (!favToLater.includes(savedBlogId)) {

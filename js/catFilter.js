@@ -1,6 +1,8 @@
+// Add event listener to the form of filtering
 var catForm = document.getElementById('categoryForm');
 catForm.addEventListener('submit', changeCatHandler);
 
+// The function that is responsible of filtering blogs by category
 function changeCatHandler(event) {
   event.preventDefault();
   var valueDropDown = event.target.selectCat.value;
@@ -13,7 +15,6 @@ function changeCatHandler(event) {
 
     }
     else if (valueDropDown === Blog.all[i].blogCategory) {
-      console.log(Blog.all[i]);
       var bloggerName = document.createElement('h6');
       var blogContent = document.createElement('p');
       var blogTitle = document.createElement('h3');
@@ -44,7 +45,7 @@ function changeCatHandler(event) {
       blogTitle.textContent = Blog.all[i].blogName;
       blogCat.textContent = Blog.all[i].blogCategory;
       console.log(Blog.all[i].blogCategory);
-      readBtn.textContent = 'view Blog';
+      readBtn.textContent = 'View Blog';
       readBtn.setAttribute('id', i);
       readBtn.addEventListener('click', saveIdLs);
 
@@ -69,9 +70,16 @@ function changeCatHandler(event) {
       blogImg.setAttribute('src', Blog.all[i].blogImg);
       blogImgDiv.appendChild(blogImg);
       var blogEverything = document.createElement('section');
-      blogEverything.appendChild(blogInfoDiv);
-      blogEverything.appendChild(blogImgDiv);
       var mainSection = document.getElementById('blogEverything');
+
+      var blogMainContainer = document.createElement('div');
+      blogMainContainer.classList.add('blogMainContainer');
+      var blodDivider = document.createElement('hr');
+      blodDivider.classList.add('blodDivider');
+      blogMainContainer.appendChild(blogInfoDiv);
+      blogMainContainer.appendChild(blogImgDiv);
+      blogEverything.appendChild(blogMainContainer);
+      blogEverything.appendChild(blodDivider);
       mainSection.appendChild(blogEverything);
       blogImgDiv.classList.add('blogRightDiv');
       blogEverything.classList.add('blogContentRow');
