@@ -1,15 +1,14 @@
 //Saves uploaded images to local storage
 
 var imageInput = document.getElementById('image');
-imageInput.addEventListener('change',loadImageFunc);
-function loadImageFunc (event){
+imageInput.addEventListener('change', loadImageFunc);
+
+function loadImageFunc(event) {
 
   var image = document.getElementById('loadedImg');
   image.src = URL.createObjectURL(event.target.files[0]);
   console.log('2');
 }
-
-
 // Get a reference to the image element
 var savedImg = document.getElementById('loadedImg');
 

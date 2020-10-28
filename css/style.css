@@ -529,7 +529,10 @@ margin-bottom: 30px;
     font-size: 16px;
     padding: 5px;
     width: 300px;
-    font-family: 'Roboto Slab';}
+    font-family: 'Roboto Slab';
+text-transform: capitalize;
+}
+    
 .categoryForm-div{
     margin-bottom: 50px;
 }
@@ -622,4 +625,7 @@ box-shadow: 4px 4px 10px #9E9E9E;
     border-radius: 10px;
     width: 300px;
     margin: auto;
+}
+#categoryOptions{
+    text-transform: capitalize;
 }
