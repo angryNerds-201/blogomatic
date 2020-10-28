@@ -16,17 +16,17 @@ Blog.prototype.storeToLocalStorage = function(){
   localStorage.setItem('allBlogs', JSON.stringify(Blog.all));
 };
 
-// all blogs constructor
-/*var allBlogs = function(items){
-  this.items = items;
-};
-*/
+
 Blog.all = [];
+
+// checks if there are blogs already saved in local storage
 var getBlogsFromLS = JSON.parse(localStorage.getItem('allBlogs'));
 if(getBlogsFromLS){
   Blog.all = getBlogsFromLS;
 }
-// var categories = [];
+
+
+// checks if there are Read later blogs already saved in local storage
 var favToLater=[];
 var getFavBlogs=JSON.parse(localStorage.getItem('favBlog'));
 if(getFavBlogs){
@@ -36,6 +36,8 @@ for (var i=0;i<favToLater.length;i++){
   favToLater[i]=parseInt(favToLater[i]);
 }
 
+
+// If no blogs are saved in the local storage, create these 5 blogs
 if(Blog.all.length === 0){
   var blog1Content = 'Whether you are a public figure or not, you’re always going to have to deal with people’s opinions of your work. Sometimes, it will be valid; other times, it won’t. Judge the judger, before you let their opinion get to you. Regardless of who is giving you the praise, or the criticism,  you should never allow someone else’s opinion to make you sad. I had a conversation with a caller on Tea With GaryVee about this very topic. I hope it resonates with you. 1. REALIZE THAT THEY DON’T KNOW YOU Whoever is leaving mean comments on your content most likely has no idea who you are. Michelle: I get really put down by people’s comments and I’ve been watching what you say about not listening to them…but I’m just a really soft person. I’m really sensitive, so I have a really hard time. Gary: Let me try to help.The biggest thing that you need to realize is they don’t know you. People criticize me all the time but they have no idea who I am or what I do. They read one quote or look at one clip, out of context, and they think they know me. I’m not too big on constructive criticism when it comes from people who have no idea what they’re talking about. Judge the judger who’s judging you. 2. EMPATHIZE WITH THEM Do you know how sad someone must be to take the time and leave a mean comment? Second, you have to be empathetic and feel compassion for them. Michelle, listen to me, do you know how sad of a place somebody has to be in for them to take the time to watch your video and say something to make you feel bad? Just so that you feel bad with them. Do you understand how sad they must feel?  I’m not joking, and I think people think i’m just trying to cheer you up, but I’m not joking. When people say shit about you like: you’re ugly, that’s stupid, you’re not funny, you’re dumb, that’s wrong– I don’t know how to do anything other than feel really bad for them.';
   var blog2Content = 'Life before blogging<br>I’m originally from Quebec, Canada. Back in the days, I used to be a social worker. I used to travel once a year for about a month and I was always spending my summers in Europe since I was 20 years old. In June 2014, I started my journey around the world at the age of 25.<br>Life on the road<br>I first started my journey in the Canadian Rockies where I hitch-hiked my way around. Then, I moved to Australia for two years. I started A Broken Backpack in July 2015. Back at the time, I was working on a farm in Australia, and I needed something to stay entertained. Quickly, A Broken Backpack became popular.<br>After Australia, I decided to go on a backpacking trip to Southeast Asia. Later on, I moved to the UK for a bit less than a year.<br>In October 2017, I decided to move to Southeast Asia. Bali became my home for about one and a half years.<br>Since 2019, I’ve been based mostly in Thailand. I spend about 2-3 months in a destination every time.<br>Of course, I do plan some occasional trips in and there, but since I’m running an online business and a few successful blogs, I prefer slow travel.<br>And… I still spend my summers in Europe.<br>Which brings me to you<br>A Broken Backpack offers great travel tips to help you stay on the road longer. I left Canada with less than CAD 2,000 on my name (and a bunch of student debts).<br>I’m living proof that you don’t need tons of savings to make your travel dreams come true.<br>I learned how to travel on the very cheap, volunteered when I needed to, and created an online business to support myself abroad. I share all these tips here on A Broken Backpack.';

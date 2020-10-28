@@ -11,6 +11,9 @@ a, label, input, select,button{
     font-family: 'Roboto Slab', serif;
     font-weight: 800;
 }
+button{
+    cursor: pointer;
+}
 #loadedImg {
     max-height: 250px;
     max-width: 250px;
@@ -23,6 +26,9 @@ header {
     position: fixed;
     width: 100%;
     box-shadow: 0 2px 12px rgb(131, 130, 130);
+}
+span{
+    font-weight: bold;
 }
 header nav {
     padding: 0 20px;
@@ -285,10 +291,20 @@ border-radius: 15px;
 #categoryForm {
     margin: auto;
 }
-.blogContentRow {
+.blogMainContainer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+.blogContentRow{
+    margin-bottom: 40px;
+}
+.blogContentRow hr{
+    border: 2px solid #EE7840;
+}
+
+.blogContentRow:last-child hr{
+    border: 0;
 }
 .blogRightDiv img {
     max-width: 250px;
@@ -509,6 +525,7 @@ margin-bottom: 30px;
 }
 
 #categoryForm #selectCat{
+    border-radius: 5px;
     font-size: 16px;
     padding: 5px;
     width: 300px;
@@ -558,6 +575,9 @@ color: #EE7840;
     
 }
 .blog-btns{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
     padding-right: 30px;
 }
 .contentSection{
@@ -570,6 +590,11 @@ padding-bottom: 60px;
 }
 
 .blog-content{
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-right: 30px;
+    box-shadow: 4px 4px 10px #9f9f9f;
 width: 70%;
 } 
 .blog-image{
@@ -582,7 +607,6 @@ border-radius: 15px;
 box-shadow: 4px 4px 10px #9E9E9E;
 }
 .blog-content p{
-    padding-right: 30px;
     text-align: justify;
     color: rgba(0, 0, 0, 0.8);
 }

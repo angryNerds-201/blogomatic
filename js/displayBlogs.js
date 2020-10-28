@@ -1,22 +1,24 @@
+// Add event listener to the form of filtering
 var categoriesArray = ['all', 'books', 'buisness', 'cars', 'diary', 'funny', 'food', 'medical', 'motherHood', 'petPeeve'];
-// to give the drop down list a values of catigoris
+
+// The function that is responsible of filtering blogs by category
 var categoriesDropDownList = document.getElementById('selectCat');
 for (var i = 0; i < Blog.all.length; i++) {
 
   categoriesArray.push(Blog.all[i].blogCategory);
 }
-console.log(categoriesArray);
 for (var i = 0; i < categoriesArray.length; i++) {
   var option = document.createElement('option');
   categoriesDropDownList.append(option);
   option.textContent = categoriesArray[i];
 }
-console.log(Blog.all.length);
+
+
+// Retreives all blogs from local storage and display them on the blogs page
 function getBlogPosts() {
   var mainSection = document.getElementById('blogEverything');
   mainSection.innerHTML = '';
   for (var i = 0; i < Blog.all.length; i++) {
-    console.log(Blog.all[i]);
     var bloggerName = document.createElement('h6');
     var blogContent = document.createElement('p');
     var blogTitle = document.createElement('h3');
@@ -40,7 +42,6 @@ function getBlogPosts() {
     blogTitleDiv.appendChild(blogTitle);
     blogCatDiv.appendChild(blogCat);
     readBtnDiv.appendChild(readBtn);
-    
 
     bloggerName.textContent = Blog.all[i].bloggerName;
     blogContent.innerHTML = Blog.all[i].blogContent;
@@ -72,9 +73,16 @@ function getBlogPosts() {
     blogImg.setAttribute('src', Blog.all[i].blogImg);
     blogImgDiv.appendChild(blogImg);
     var blogEverything = document.createElement('section');
-    blogEverything.appendChild(blogInfoDiv);
-    blogEverything.appendChild(blogImgDiv);
     var mainSection = document.getElementById('blogEverything');
+
+    var blogMainContainer = document.createElement('div');
+    blogMainContainer.classList.add('blogMainContainer');
+    var blodDivider = document.createElement('hr');
+    blodDivider.classList.add('blodDivider');
+    blogMainContainer.appendChild(blogInfoDiv);
+    blogMainContainer.appendChild(blogImgDiv);
+    blogEverything.appendChild(blogMainContainer);
+    blogEverything.appendChild(blodDivider);
     mainSection.appendChild(blogEverything);
     blogImgDiv.classList.add('blogRightDiv');
     blogEverything.classList.add('blogContentRow');

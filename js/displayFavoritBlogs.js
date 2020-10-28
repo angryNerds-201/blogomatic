@@ -1,11 +1,11 @@
-
+// Retreives the array of Read Later blogs and display them on Read Later page
 function getBlogPosts() {
   if (favToLater.length === 0) {
-var newPara = document.createElement('p');
-newPara.textContent='Read Later is empty.';
-newPara.classList.add('empty-message');
-var mainSection = document.getElementById('favoriteBlogs');
-mainSection.appendChild(newPara);
+    var newPara = document.createElement('p');
+    newPara.textContent = 'Read Later is empty.';
+    newPara.classList.add('empty-message');
+    var mainSection = document.getElementById('favoriteBlogs');
+    mainSection.appendChild(newPara);
   }
   else {
     for (var i = 0; i < Blog.all.length; i++) {
@@ -63,9 +63,19 @@ mainSection.appendChild(newPara);
         blogImg.setAttribute('src', Blog.all[i].blogImg);
         blogImgDiv.appendChild(blogImg);
         var blogEverything = document.createElement('section');
-        blogEverything.appendChild(blogInfoDiv);
-        blogEverything.appendChild(blogImgDiv);
-        var mainSection = document.getElementById('favoriteBlogs');
+
+
+        var blogMainContainer = document.createElement('div');
+        blogMainContainer.classList.add('blogMainContainer');
+        var blodDivider = document.createElement('hr');
+        blodDivider.classList.add('blodDivider');
+        blogMainContainer.appendChild(blogInfoDiv);
+        blogMainContainer.appendChild(blogImgDiv);
+        blogEverything.appendChild(blogMainContainer);
+        blogEverything.appendChild(blodDivider);
+
+
+        mainSection = document.getElementById('favoriteBlogs');
         mainSection.appendChild(blogEverything);
         blogImgDiv.classList.add('blogRightDiv');
         blogEverything.classList.add('blogContentRow');
@@ -84,13 +94,15 @@ mainSection.appendChild(newPara);
 
 }
 
-
+// Saves the the id of the blog to the local storage
 function saveIdLs(event) {
   var selectedId = event.target.id;
   localStorage.setItem('BlogId', JSON.stringify(selectedId));
   window.location.replace('blog-page.html');
 
 }
+
+// Removes blog from array of Read Later blogs and Read Later page
 function removeFromFavorite(event) {
   var confirmResult = confirm('Did you finsish reading this blog?');
   if (confirmResult) {
