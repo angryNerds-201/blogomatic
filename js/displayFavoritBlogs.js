@@ -104,7 +104,7 @@ function saveIdLs(event) {
 
 // Removes blog from array of Read Later blogs and Read Later page
 function removeFromFavorite(event) {
-  var confirmResult = confirm('Did you finsish reading this blog?');
+  var confirmResult = confirm('Did you finish reading this blog?');
   if (confirmResult) {
     var elementToRemove = event.target.getAttribute('data-dataBlogId');
     var indexOfElement = favToLater.indexOf(parseInt(elementToRemove));
